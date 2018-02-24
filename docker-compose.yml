@@ -1,0 +1,12 @@
+version: '2'
+services:
+  auth_service:
+    build: ./Dockerfile
+    ports:
+      - 3000:3000
+    command: python auth_service/api.py
+  data_service:
+    build: ./Dockerfile
+    ports:
+      - 3001:3001
+    command: python data_service/api.py
