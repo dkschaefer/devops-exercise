@@ -74,7 +74,7 @@ This app runs on Python 3.5. Make sure you have Python and Virtual envionment to
 ```
 # Ensure you have set `MONGODB` in some manner (see above).
 virtualenv -p python3 env
-source env/bin/activate.sh
+source env/bin/activate
 pip install -r requirements.txt
 python api.py
 ```
