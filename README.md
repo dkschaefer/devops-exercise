@@ -14,6 +14,7 @@ cd data_service && ./startService
 
 ## Docker Development workstation setup:
  *In progress, needs some more testing*
+
 Run 'docker-compose up' This should start up 3 containerized services: auth, data, and web.
 
 ## Accessing the API:
