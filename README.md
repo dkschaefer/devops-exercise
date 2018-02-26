@@ -10,6 +10,7 @@ Run ./startServices
 
 Alternatively, to run 'auth' or 'data' services (independently):
 cd auth_service && ./startService
+
 cd data_service && ./startService
 
 ## Docker Development workstation setup:
