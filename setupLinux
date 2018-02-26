@@ -1,0 +1,23 @@
+#!/bin/bash
+# Tested on Ubuntu 16.04
+
+# Import MongoDB public GPG Key and add to 'apt' package manager sources
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5
+echo "deb [ arch=amd64,arm64 ] https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-3.6.list
+
+# Install Python 3 & MongoDB
+sudo apt update && apt install python3 mongodb-org -y
+
+# Install Apache 2
+sudo apt install apache2 -y
+
+# Start MongoDB service
+sudo service mongod start
+
+# Set up Apache2 config and modules 
+sudo cp proxy-host.conf /etc/apache2/sites-available
+sudo a2enmod proxy
+sudo a2enmod proxy_http
+sudo a2enmod rewrite
+sudo a2ensite proxy-host
+sudo service apache2 restart

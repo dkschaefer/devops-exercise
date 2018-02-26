@@ -1,0 +1,8 @@
+ * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+connecting...
+connected...
+ * Running on http://0.0.0.0:5001/ (Press CTRL+C to quit)
+127.0.0.1 - - [24/Feb/2018 03:14:49] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Feb/2018 03:15:55] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Feb/2018 03:16:12] "GET /health HTTP/1.1" 200 -
+127.0.0.1 - - [24/Feb/2018 03:16:19] "GET /accounts HTTP/1.1" 200 -

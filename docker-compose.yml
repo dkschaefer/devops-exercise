@@ -10,3 +10,8 @@ services:
     ports:
       - 3001:3001
     command: python data_service/api.py
+  apache2:
+    build: ./apache.Dockerfile
+    ports:
+      - 80:80
+    command: service apache2 restart
